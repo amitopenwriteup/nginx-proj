@@ -17,7 +17,7 @@ spec:
         app.kubernetes.io/name: external-app
         app.kubernetes.io/instance: nginx
     spec:
-      serviceAccountName: stage-nginx-sa
+      serviceAccountName: manish-nginx-sa
       securityContext: {}
       containers:
         - name: nginx
