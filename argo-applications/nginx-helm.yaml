@@ -6,11 +6,13 @@ metadata:
 spec:
   destination:
     name: arn:aws:eks:ap-south-1:130705418859:cluster/stage-devseccops-eks-cluster
-    namespace:  {{ .Values.namespace.name }}
   project: stage-devseccops
   source:
-    path: nginx
+    path: nginx-helm
     repoURL: git@github.com:amitopenwriteup/nginx-argoproj.git
     targetRevision: main
+    helm:
+      valueFiles:
+        - Values.yaml
   syncPolicy:
     automated: {}
