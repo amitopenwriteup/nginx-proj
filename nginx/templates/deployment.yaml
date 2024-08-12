@@ -23,7 +23,7 @@ spec:
       containers:
         - name: nginx
           securityContext: {}
-          image: amitow/nginx:v1
+          image: nginx
           imagePullPolicy: 'Always'
           env:
             - name: "ENVIRONMENT"
