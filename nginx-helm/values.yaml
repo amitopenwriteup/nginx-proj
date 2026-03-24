@@ -1,3 +1,11 @@
 replicaCount: 3
 service:
   type: ClusterIP
+controller:
+  service:
+    # Set to false to disable the HTTPS port (443) in the controller Service
+    enableHttps: false 
+  # Optionally, you might also want to ensure the HTTP port is enabled
+  # or control the redirect behavior if necessary
+  sslRedirect: false 
+
