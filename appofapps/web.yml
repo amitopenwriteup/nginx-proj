@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: wb
+spec:
+  destination:
+    namespace: webtest
+    server: https://kubernetes.default.svc
+  source:
+    path: ''
+    repoURL: https://charts.bitnami.com/bitnami
+    targetRevision: 25.2.10
+    chart: nginx
+  sources: []
+  project: training
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
+    automated:
+      prune: false
+      selfHeal: false
+      enabled: true
