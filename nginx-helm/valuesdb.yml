@@ -1,0 +1,8 @@
+auth:
+  rootPassword: "Welcome1"
+
+primary:
+  persistence:
+    enabled: true
+    storageClass: "nfs-client"
+    size: 8Gi
