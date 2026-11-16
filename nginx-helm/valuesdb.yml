@@ -1,7 +1,3 @@
-global:
-  security:
-    allowInsecureImages: true
-
 auth:
   rootPassword: "Welcome1"
 
